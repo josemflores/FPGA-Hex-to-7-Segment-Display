@@ -99,8 +99,10 @@ git clone https://github.com/josemflores/FPGA-Hex-to-7-Segment-Display.git
 
 ---
 
-## Author
+## Authors
 
 Jose Perez Flores - Electrical Engineering, University of Texas at Arlington
+
 Marco Cruz - Electrical Engineering, University of Texas at Arlington
+
 Hoang Phuong Vu - Electrical Engineering, University of Texas at Arlington
