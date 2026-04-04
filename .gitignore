@@ -1,0 +1,10 @@
+db/
+incremental_db/
+output_files/
+*.done
+*.flow
+*.rpt
+*.summary
+*.pin
+*.smsg
+*.jdi
