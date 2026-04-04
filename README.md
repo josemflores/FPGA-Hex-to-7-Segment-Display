@@ -1,1 +1,1 @@
-######FPGA - HEX to 7-Segment Display Project
+#FPGA - HEX to 7-Segment Display Project
