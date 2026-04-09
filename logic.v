@@ -14,10 +14,10 @@ module logic
 	);
 	
 	//inputs
-	input in_0;
-	input in_1;
-	input in_2;
-	input in_3;
+	input in_0; //A MSB to LSB order (in_0 is MSB, in_3 is LSB)
+	input in_1; //B
+	input in_2;	//C
+	input in_3;	//D
 	
 	//outputs
 	output top;
@@ -34,5 +34,15 @@ module logic
 	
 	assign top_right = (~in_0 & in_1 & ~in_2 & in_3) | (in_0 & in_1 & ~in_3) | 
 	(in_0 & in_2 & in_3) | (in_1 & in_2 & ~in_3);
+	
+	assign top_left = (in_0 & in_1 & ~in_2 & in_3) | (~in_0 & ~in_1 & in_3) |
+	(~in_0 & in_2 & in_3) | (~in_0 & ~in_1 & in_2);
+	
+	assign middle = (~in_0 & ~in_1 & ~in_2) | (in_0 & in_1 & ~in_2 & ~in_3) | 
+	(~in_0 & in_1 & in_2 & in_3);
+	
+	assign bottom_left = (~in_0 & in_1 & ~in_2) | (~in_1 & ~in_2 & in_3) | 
+	(~in_0 & in_3);
+	
 	
 endmodule
