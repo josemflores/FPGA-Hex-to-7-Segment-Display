@@ -28,7 +28,7 @@ module logic
 	output bottom_left;
 	output bottom;
 	
-	//behaviour
+	//behavior
 	assign top = (~in_0 & in_1 & ~in_2 & ~in_3) | (~in_0 & ~in_1 & ~in_2 & in_3) | 
 	(in_0 & in_1 & ~in_2 & in_3) | (in_0 & ~in_1 & in_2 & in_3);
 	
@@ -43,6 +43,12 @@ module logic
 	
 	assign bottom_left = (~in_0 & in_1 & ~in_2) | (~in_1 & ~in_2 & in_3) | 
 	(~in_0 & in_3);
+	
+	assign bottom_right = (in_0 & in_1 & in_2) | (in_0 & in_1 & ~in_3) | 
+	(~in_0 & ~in_1 & in_2 & ~in_3);
+	
+	assign bottom = (~in_0 & in_1 & ~in_2 & ~in_3) | (~in_0 & ~in_1 & ~in_2 & in_3) |
+	(in_0 & ~in_1 & in_2 & ~in_3) | (in_1 & in_2 & in_3);
 	
 	
 endmodule

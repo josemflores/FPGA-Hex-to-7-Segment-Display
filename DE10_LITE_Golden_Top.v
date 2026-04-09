@@ -96,6 +96,6 @@ logic logic1
 		.bottom (bottom)
 	);
 	
-assign HEX0 = {middle , top_left, bottom_left, bottom, bottom_right, top_right, top};
+assign HEX0 = {1'b1, middle , top_left, bottom_left, bottom, bottom_right, top_right, top};
 
 endmodule
