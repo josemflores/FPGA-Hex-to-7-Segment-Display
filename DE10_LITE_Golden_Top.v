@@ -68,8 +68,6 @@ module DE10_LITE_Golden_Top(
 //  REG/WIRE declarations
 //=======================================================
 
-wire top, top_right, top_left, middle, bottom_right, bottom_left, bottom;
-
 //=======================================================
 //  Structural coding
 //=======================================================
@@ -81,21 +79,21 @@ assign HEX3 = 8'hFF;
 assign HEX4 = 8'hFF;
 assign HEX5 = 8'hFF;
 
+assign HEX0[7] = 1'b1;
+
 logic logic1 
 	(
 		.in_0 (SW[3]), //MSB to LSB order
 		.in_1 (SW[2]),
 		.in_2 (SW[1]),
 		.in_3 (SW[0]),
-		.top (top),
-		.top_right (top_right),
-		.top_left (top_left),
-		.middle (middle),
-		.bottom_right (bottom_right),
-		.bottom_left (bottom_left),
-		.bottom (bottom)
+		.top (HEX0[0]),
+		.top_right (HEX0[1]),
+		.top_left (HEX0[5]),
+		.middle (HEX0[6]),
+		.bottom_right (HEX0[2]),
+		.bottom_left (HEX0[4]),
+		.bottom (HEX0[3])
 	);
-	
-assign HEX0 = {1'b1, middle , top_left, bottom_left, bottom, bottom_right, top_right, top};
 
 endmodule
